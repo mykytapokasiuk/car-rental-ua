@@ -10,5 +10,5 @@ export default defineConfig({
       components: '/src/components',
     },
   },
-  base: '/car-rental-ua',
+  base: '/easy-drive-ua',
 });

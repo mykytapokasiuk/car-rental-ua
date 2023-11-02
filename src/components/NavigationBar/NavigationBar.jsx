@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import css from './NavigationBar.module.css';
 
 const NavigationBar = () => {
   return (
-    <Navbar expand="xl" data-bs-theme="dark">
+    <Navbar className={css.navBarContainer} expand="xl" data-bs-theme="dark">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <h1 className={css.navBarText}>Car Rental</h1>
+          <h1 className={css.navBarText}>EasyDrive</h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -1,8 +1,13 @@
 import React from 'react';
 import css from './HomePage.module.css';
+import HomePageTitle from '../../components/HomePageTitle/HomePageTitle';
 
-function HomePage() {
-  return <section className={css.sectionContainer}>HomePage</section>;
-}
+const HomePage = () => {
+  return (
+    <section className={css.sectionContainer}>
+      <HomePageTitle />
+    </section>
+  );
+};
 
 export default HomePage;

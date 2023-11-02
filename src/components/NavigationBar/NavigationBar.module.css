@@ -1,3 +1,7 @@
+.navBarContainer {
+    z-index: 1;
+}
+
 .navBarText {
     font-weight: 800;
     color: #fd8847;
@@ -22,7 +26,6 @@
 .navBarLinkText:hover {
     color: #1d657a;
 }
-
 
 .navBarBtn {
     width: 75px;
