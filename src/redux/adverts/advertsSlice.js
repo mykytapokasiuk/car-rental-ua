@@ -1,7 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchAdvertsThunk } from './operations.js';
 
-const initialState = { items: [], isLoading: false, error: null };
+const initialState = {
+  items: [],
+  isLoading: false,
+  error: null,
+  favorite: null,
+};
 
 const advertsSlice = createSlice({
   name: 'adverts',

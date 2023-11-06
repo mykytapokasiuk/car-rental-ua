@@ -1,0 +1,12 @@
+.advertsContainer {
+    padding: 0 128px;
+}
+
+.advertsList {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+    row-gap: 50px;
+    column-gap: 29px;
+    justify-content: center;
+}

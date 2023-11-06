@@ -2,7 +2,8 @@
     z-index: 1;
 }
 
-.navBarText {
+.navBarText,
+.menuText {
     font-weight: 800;
     color: #fd8847;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
@@ -10,7 +11,7 @@
 }
 
 .navBarText:hover {
-    color: #1d657a;
+    color: #1d667c
 }
 
 .navBarLinkText {
@@ -25,9 +26,4 @@
 
 .navBarLinkText:hover {
     color: #1d657a;
-}
-
-.navBarBtn {
-    width: 75px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }

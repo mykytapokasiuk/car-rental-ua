@@ -1,31 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import css from './NavigationBar.module.css';
 
 const NavigationBar = () => {
   return (
-    <Navbar className={css.navBarContainer} expand="xl" data-bs-theme="dark">
-      <Container>
-        <Navbar.Brand as={Link} to="/">
-          <h1 className={css.navBarText}>EasyDrive</h1>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
-              <p className={css.navBarLinkText}>Home</p>
-            </Nav.Link>
-            <Nav.Link as={Link} to="/catalog">
-              <p className={css.navBarLinkText}>Catalog</p>
-            </Nav.Link>
-            <Nav.Link as={Link} to="/favorites">
-              <p className={css.navBarLinkText}>Favorites</p>
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <>
+      <Navbar
+        className={css.navBarContainer}
+        data-bs-theme="dark"
+        expand={false}
+      >
+        <Container fluid>
+          <Navbar.Brand as={Link} to="/">
+            <h1 className={css.navBarText}>EasyDrive</h1>
+          </Navbar.Brand>
+          <Navbar.Toggle
+            style={{ border: 'none' }}
+            aria-controls={`offcanvasNavbar-expand-xl`}
+          />
+          <Navbar.Offcanvas
+            id={`offcanvasNavbar-expand-xl`}
+            aria-labelledby={`offcanvasNavbarLabel-expand-xl`}
+            placement="end"
+            style={{ backgroundColor: 'rgba(29, 102, 124, 0.9)' }}
+          >
+            <Offcanvas.Header
+              style={{ paddingBottom: '0px' }}
+              closeButton
+              data-bs-theme="dark"
+            >
+              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-xl`}>
+                <h2 className={css.menuText}>Menu</h2>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body style={{ paddingTop: '0px' }}>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link as={Link} to="/">
+                  <p className={css.navBarLinkText}>Home</p>
+                </Nav.Link>
+                <Nav.Link as={Link} to="/catalog">
+                  <p className={css.navBarLinkText}>Catalog</p>
+                </Nav.Link>
+                <Nav.Link as={Link} to="/favorites">
+                  <p className={css.navBarLinkText}>Favorites</p>
+                </Nav.Link>
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+    </>
   );
 };
 

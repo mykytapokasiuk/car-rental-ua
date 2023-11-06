@@ -1,47 +1,47 @@
 @font-face {
   font-family: Orbitron;
-  font-weight: 900;
-  font-style: normal;
-  src: url(./fonts/Orbitron-Black.ttf);
-}
-
-@font-face {
-  font-family: Orbitron;
   font-weight: 800;
   font-style: normal;
-  src: url(./fonts/Orbitron-ExtraBold.ttf);
-}
-
-@font-face {
-  font-family: Orbitron;
-  font-weight: 700;
-  font-style: normal;
-  src: url(./fonts/Orbitron-Bold.ttf);
-}
-
-@font-face {
-  font-family: Orbitron;
-  font-weight: 600;
-  font-style: normal;
-  src: url(./fonts/Orbitron-SemiBold.ttf);
+  src: url(./fonts/Orbitron/Orbitron-ExtraBold.ttf);
 }
 
 @font-face {
   font-family: Orbitron;
   font-weight: 500;
   font-style: normal;
-  src: url(./fonts/Orbitron-Medium.ttf);
+  src: url(./fonts/Orbitron/Orbitron-Medium.ttf);
 }
 
 @font-face {
   font-family: Orbitron;
   font-weight: 400;
   font-style: normal;
-  src: url(./fonts/Orbitron-Regular.ttf);
+  src: url(./fonts/Orbitron/Orbitron-Regular.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  font-weight: 600;
+  font-style: normal;
+  src: url(./fonts/Manrope/Manrope-Medium.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  font-weight: 500;
+  font-style: normal;
+  src: url(./fonts/Manrope/Manrope-Medium.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  font-weight: 400;
+  font-style: normal;
+  src: url(./fonts/Manrope/Manrope-Regular.ttf);
 }
 
 body {
-  background-color: #74a2b2;
+  /* background-color: #74a2b2; */
   font-family: 'Orbitron', sans-serif;
   font-weight: 400;
   font-style: normal;
