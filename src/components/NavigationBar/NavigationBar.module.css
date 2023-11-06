@@ -2,16 +2,35 @@
     z-index: 1;
 }
 
-.navBarText,
-.menuText {
+.navBarBrand {
     font-weight: 800;
     color: #fd8847;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     transition: color 500ms ease-in-out;
 }
 
-.navBarText:hover {
+.navBarBrand:hover {
     color: #1d667c
+}
+
+.navBarBrandBlue {
+    composes: navBarBrand;
+    color: #3470FF;
+}
+
+.navBarBrandBlue:hover {
+    color: #fd8847;
+}
+
+.navbarMenu {
+    composes: navBarBrand;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+    pointer-events: none;
+}
+
+.navbarMenuWhite {
+    composes: navbarMenu;
+    color: #ffffff;
 }
 
 .navBarLinkText {
@@ -19,11 +38,20 @@
     color: #fd8847;
     font-size: 18px;
     font-weight: 500;
-    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
     letter-spacing: 0.05em;
     transition: color 500ms ease-in-out;
 }
 
 .navBarLinkText:hover {
     color: #1d657a;
+}
+
+.navBarLinkTextWhite {
+    composes: navBarLinkText;
+    color: #ffffff;
+}
+
+.navBarLinkTextWhite:hover {
+    color: #fd8847;
 }
