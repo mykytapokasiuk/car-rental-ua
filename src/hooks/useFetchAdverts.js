@@ -3,10 +3,23 @@ import {
   selectAdverts,
   selectError,
   selectIsloading,
+  selectAxiosParams,
 } from '../redux/adverts/selectors.js';
+import { incrementPage } from '../redux/adverts/advertsSlice.js';
+import { fetchAdvertsThunk } from '../redux/adverts/operations.js';
 
 const useFetchAdverts = () => {
   const adverts = useSelector(selectAdverts);
+  const isLoading = useSelector(selectIsloading);
+  const error = useSelector(selectError);
+  const page = useSelector(selectAxiosParams); //? Useless???
+  const dispatch = useDispatch();
+
+  const onLoadMore = () => {
+    dispatch(incrementPage());
+    dispatch(fetchAdvertsThunk());
+  };
+
   const filteredAdverts = adverts.map((item) => {
     return {
       ...item,
@@ -18,11 +31,8 @@ const useFetchAdverts = () => {
       },
     };
   });
-  console.log(filteredAdverts);
-  const isLoading = useSelector(selectIsloading);
-  const error = useSelector(selectError);
-  const dispatch = useDispatch();
-  return { filteredAdverts, isLoading, error, dispatch };
+
+  return { adverts, filteredAdverts, isLoading, error, dispatch, onLoadMore };
 };
 
 export default useFetchAdverts;

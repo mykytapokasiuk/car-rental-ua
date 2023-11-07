@@ -7,10 +7,14 @@ import * as notifications from '../../services/utils.js';
 import css from './AdvertsList.module.css';
 
 const AdvertsList = () => {
-  const { filteredAdverts, isLoading, error, dispatch } = useFetchAdverts();
+  const { adverts, filteredAdverts, isLoading, error, dispatch, onLoadMore } =
+    useFetchAdverts();
+
   useEffect(() => {
     if (error) {
       notifications.onError(error);
+      return;
+    } else if (adverts.length !== 0) {
       return;
     }
     dispatch(fetchAdvertsThunk());
@@ -39,6 +43,14 @@ const AdvertsList = () => {
             />
           ))}
         </ul>
+        <button
+          type="button"
+          onClick={() => {
+            onLoadMore();
+          }}
+        >
+          BUTTON
+        </button>
       </div>
     </>
   );
