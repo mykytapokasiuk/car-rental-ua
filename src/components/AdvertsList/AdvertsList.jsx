@@ -7,8 +7,15 @@ import * as notifications from '../../services/utils.js';
 import css from './AdvertsList.module.css';
 
 const AdvertsList = () => {
-  const { adverts, filteredAdverts, isLoading, error, dispatch, onLoadMore } =
-    useFetchAdverts();
+  const {
+    adverts,
+    filteredAdverts,
+    isLoading,
+    error,
+    dispatch,
+    onLoadMore,
+    showButton,
+  } = useFetchAdverts();
 
   useEffect(() => {
     if (error) {
@@ -24,7 +31,7 @@ const AdvertsList = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <div className="advertsContainer">
+      <div className={css.advertsContainer}>
         <ul className={css.advertsList}>
           {filteredAdverts.map((item) => (
             <AdvertsListItem
@@ -40,17 +47,25 @@ const AdvertsList = () => {
               accessories={item.accessories}
               functionalities={item.functionalities}
               img={item.img}
+              id={item.id}
+              description={item.description}
+              fuelConsumption={item.fuelConsumption}
+              engineSize={item.engineSize}
+              rentalConditions={item.rentalConditions}
             />
           ))}
         </ul>
-        <button
-          type="button"
-          onClick={() => {
-            onLoadMore();
-          }}
-        >
-          BUTTON
-        </button>
+        {showButton && (
+          <button
+            className={css.loadMoreBtn}
+            type="button"
+            onClick={() => {
+              onLoadMore();
+            }}
+          >
+            Load more
+          </button>
+        )}
       </div>
     </>
   );

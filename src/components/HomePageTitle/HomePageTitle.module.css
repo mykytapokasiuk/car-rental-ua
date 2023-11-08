@@ -42,7 +42,7 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 1339px) {
+@media screen and (min-width: 375px) and (max-width: 1439px) {
     .container {
         transform: translate(-5%, -20%);
     }

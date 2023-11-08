@@ -1,0 +1,143 @@
+.advertBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.advertTitle {
+    padding: 0;
+    color: #121417;
+    font-family: "Manrope-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.advertBody>img {
+    border-radius: 14px;
+}
+
+.carInfoContainer {
+    margin-top: 14px;
+}
+
+.carInfoTitle {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    color: #121417;
+    font-family: "Manrope-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.model {
+    color: #3470FF;
+}
+
+.carInfoBody {
+    margin-top: 8px;
+}
+
+.carInfoText {
+    margin: 0;
+    font-family: "Manrope-Regular", Helvetica;
+    color: rgba(18, 20, 23, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.carDescription {
+    font-family: "Manrope-Regular", Helvetica;
+    margin: 14px 0 0 0;
+    color: #121417;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carAccessories {
+    margin: 24px 0 0 0;
+}
+
+.accessoriesTitle {
+    margin: 0;
+    color: #121417;
+    font-family: "Manrope-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.accessoriesText {
+    margin: 8px 0 0 0;
+    font-family: "Manrope-Regular", Helvetica;
+    color: rgba(18, 20, 23, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.rentalConditions {
+    margin-top: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.rentalConditionsTitle {
+    margin: 0;
+    color: #121417;
+    font-family: "Manrope-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.rentalConditionsText {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 8px 0 0 0;
+}
+
+.rentalConditionsItem {
+    display: flex;
+    align-items: center;
+    padding: 7px 14px;
+    border-radius: 35px;
+    background-color: #F9F9F9;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.ageNumber,
+.mileage,
+.price {
+    margin-left: 3px;
+    color: #3470FF;
+}
+
+.rentalCarBtn {
+    margin-top: 31px;
+    padding: 12px 50px;
+    color: #ffffff;
+    font-family: "Manrope", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    background-color: #3470ff;
+    border: none;
+    border-radius: 12px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 500ms ease-in-out;
+}
+
+.rentalCarBtn:hover {
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}

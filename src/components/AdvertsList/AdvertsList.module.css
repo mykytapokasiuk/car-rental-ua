@@ -1,12 +1,60 @@
 .advertsContainer {
-    padding: 0 128px;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .advertsList {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 70px;
+    margin-bottom: 40px;
     row-gap: 50px;
     column-gap: 29px;
     justify-content: center;
+}
+
+.loadMoreBtn {
+    margin-bottom: 40px;
+    background-color: transparent;
+    color: #3470FF;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: text-shadow 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.loadMoreBtn:hover {
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    color: #0B44CD;
+}
+
+@media screen and (min-width: 375px) {
+    .loadMoreBtn {
+        margin-bottom: 80px;
+    }
+
+    .advertsList {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .loadMoreBtn {
+        margin-bottom: 150px;
+    }
+
+    .advertsList {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .advertsContainer {
+        width: 1440px;
+        padding: 0 128px;
+    }
 }
