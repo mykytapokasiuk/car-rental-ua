@@ -65,15 +65,15 @@ const CarInfoModal = ({ show, setShow, carProps }) => {
                 </li>
                 <li className={css.rentalConditionsItem}>
                   Price:{' '}
-                  <span className={css.price}>
-                    {carProps.rentalPrice.substring(1)}$
-                  </span>
+                  <span className={css.price}>{carProps.rentalPrice}$</span>
                 </li>
               </ul>
             </div>
           </div>
           <button className={css.rentalCarBtn} type="button">
-            Rental car
+            <a className={css.rentalCarBtnLink} href="tel:+380730000000">
+              Rental car
+            </a>
           </button>
         </div>
       </Modal.Body>

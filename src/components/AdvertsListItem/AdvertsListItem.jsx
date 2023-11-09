@@ -19,7 +19,7 @@ const AdvertsListItem = (props) => {
           {carProps.make}
           <span className={css.model}>{carProps.model},</span>
           {carProps.year}
-          <span className={css.rentalPrice}>{carProps.rentalPrice}</span>
+          <span className={css.rentalPrice}>${carProps.rentalPrice}</span>
         </div>
         <div className={css.advertCardBody}>
           {carProps.address.city} | {carProps.address.country} |{' '}

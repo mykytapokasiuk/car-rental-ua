@@ -1,4 +1,5 @@
 import { Notify } from 'notiflix';
+import { makes } from './makes.js';
 
 export const onError = (error) => {
   Notify.failure(`Please, try again later. Error: ${error}`, {
@@ -25,3 +26,15 @@ export const onSuccessFetch = () => {
     cssAnimationStyle: 'from-top',
   });
 };
+
+export const carMakes = makes.map((make) => ({
+  value: make,
+  label: make,
+}));
+
+export const pricesPerHour = [...Array(26)]
+  .map((item, i) => ({
+    value: 10 * i,
+    label: 10 * i,
+  }))
+  .slice(1);

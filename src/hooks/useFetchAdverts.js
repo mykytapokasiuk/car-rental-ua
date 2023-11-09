@@ -18,27 +18,29 @@ const useFetchAdverts = () => {
     dispatch(fetchAdvertsThunk());
   };
 
-  const filteredAdverts = adverts.map((item) => {
+  const updatedAdverts = adverts.map((item) => {
     return {
       ...item,
       address: {
         city: item.address.split(', ')[1],
         country: item.address.split(', ')[2],
       },
+      mileage: item.mileage / 1000,
       rentalConditions: {
         age: item.rentalConditions.substring(0, 11),
         ageNumber: item.rentalConditions.substring(13, 15),
         license: item.rentalConditions.substring(16, 38),
         required: item.rentalConditions.substring(39),
       },
+      rentalPrice: item.rentalPrice.substring(1),
     };
   });
 
-  const showButton = filteredAdverts.length !== 32;
+  const showButton = updatedAdverts.length !== 32;
 
   return {
     adverts,
-    filteredAdverts,
+    updatedAdverts,
     isLoading,
     error,
     dispatch,

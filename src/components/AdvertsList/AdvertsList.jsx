@@ -9,7 +9,7 @@ import css from './AdvertsList.module.css';
 const AdvertsList = () => {
   const {
     adverts,
-    filteredAdverts,
+    updatedAdverts,
     isLoading,
     error,
     dispatch,
@@ -33,7 +33,7 @@ const AdvertsList = () => {
       {isLoading && <Loader />}
       <div className={css.advertsContainer}>
         <ul className={css.advertsList}>
-          {filteredAdverts.map((item) => (
+          {updatedAdverts.map((item) => (
             <AdvertsListItem
               key={item.id}
               make={item.make}
@@ -55,7 +55,7 @@ const AdvertsList = () => {
             />
           ))}
         </ul>
-        {showButton && (
+        {!isLoading && showButton && (
           <button
             className={css.loadMoreBtn}
             type="button"

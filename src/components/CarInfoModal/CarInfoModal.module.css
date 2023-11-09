@@ -126,7 +126,6 @@
 .rentalCarBtn {
     margin-top: 31px;
     padding: 12px 50px;
-    color: #ffffff;
     font-family: "Manrope", Helvetica;
     font-size: 14px;
     font-weight: 600;
@@ -140,4 +139,8 @@
 
 .rentalCarBtn:hover {
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.rentalCarBtnLink {
+    color: #ffffff;
 }

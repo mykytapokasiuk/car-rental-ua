@@ -1,11 +1,11 @@
 import React from 'react';
 import AdvertsList from '../../components/AdvertsList/AdvertsList.jsx';
-import CarFilter from '../../components/CarFilter/CarFilter.jsx';
+import CarFilterForm from '../../components/CarFilterForm/CarFilterForm.jsx';
 
 const CatalogPage = () => {
   return (
     <section>
-      <CarFilter />
+      <CarFilterForm />
       <AdvertsList />
     </section>
   );
