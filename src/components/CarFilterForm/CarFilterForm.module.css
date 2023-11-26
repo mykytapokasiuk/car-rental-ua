@@ -1,5 +1,178 @@
-.filter {
+label {
+    font-family: 'Manrope-medium', sans-serif;
+    font-size: 14px;
+    color: #8A8A89;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.carFilterFormContainer {
+    padding: 0 15px;
+    margin: 0 auto;
+    font-family: 'Manrope', sans-serif;
+}
+
+.carFilterForm {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-items: end;
     padding-bottom: 50px;
+    gap: 18px;
+}
+
+.carBrandContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.carBrandSelectContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carBrandSelect {
+    padding: 14px 18px;
+    background-color: #F7F7FB;
+    color: #121417;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Manrope-medium', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.carBrandSelect::-ms-expand {
+    display: none;
+}
+
+.selectArrow {
+    position: absolute;
+    right: 36px;
+    top: 14px;
+    pointer-events: none;
+}
+
+.carBrandSelect:focus,
+.carPriceSelect:focus,
+.carMileageFromInput:focus,
+.carMileageToInput:focus {
+    outline: none;
+}
+
+.clearFilterBtn {
+    color: #dcdcf0;
+    background-color: transparent;
+    font-family: 'Manrope-medium', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: color 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.clearFilterBtn:hover {
+    color: red;
+    transform: rotateY(180deg);
+}
+
+.carPriceContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.carPriceSelectContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carPriceSelect {
+    padding: 14px 44px 14px 18px;
+    background-color: #F7F7FB;
+    color: #121417;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Manrope-medium', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.carPriceSelect::-ms-expand {
+    display: none;
+}
+
+.carMileageFromContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.carMileageFromInputContainer {
+    display: flex;
+}
+
+.carMileageFromInput {
+    padding: 14px 18px;
+    background-color: #F7F7FB;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Manrope-medium', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.carMileageFromInput::placeholder,
+.carMileageToInput::placeholder {
+    color: #121417;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carMileageToContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.carMileageToInputContainer {
+    display: flex;
+}
+
+.carMileageToInput {
+    padding: 14px 18px;
+    background-color: #F7F7FB;
+    color: #121417;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Manrope-medium', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.carFilterSubmitBtn {
+    padding: 14px 44px;
+    color: #ffffff;
+    background-color: #3470FF;
+    border: none;
+    border-radius: 12px;
+    font-family: "Manrope-SemiBold", Helvetica;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    transition: box-shadow 500ms ease-in-out, background-color 500ms ease-in-out;
+}
+
+.carFilterSubmitBtn:hover {
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #0B44CD;
 }

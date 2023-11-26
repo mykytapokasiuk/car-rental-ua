@@ -44,7 +44,7 @@ AdvertsListItem.propTypes = {
   make: PropTypes.string.isRequired,
   model: PropTypes.string.isRequired,
   year: PropTypes.number.isRequired,
-  rentalPrice: PropTypes.string.isRequired,
+  rentalPrice: PropTypes.number.isRequired,
   address: PropTypes.objectOf(PropTypes.string).isRequired,
   rentalCompany: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,

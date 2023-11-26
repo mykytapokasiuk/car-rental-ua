@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import css from './NavigationBar.module.css';
 
 const NavigationBar = () => {
+  const [isActive, setIsActive] = useState(false);
   const { pathname } = useLocation();
   const homePage = pathname === '/';
 
@@ -49,7 +49,7 @@ const NavigationBar = () => {
             </Offcanvas.Header>
             <Offcanvas.Body style={{ paddingTop: '0px' }}>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link as={Link} to="/" eventKey="1">
+                <Nav.Link as={NavLink} to="/" eventKey="/">
                   <p
                     className={
                       homePage ? css.navBarLinkText : css.navBarLinkTextWhite
@@ -58,7 +58,7 @@ const NavigationBar = () => {
                     Home
                   </p>
                 </Nav.Link>
-                <Nav.Link as={Link} to="/catalog" eventKey="2">
+                <Nav.Link as={Link} to="/catalog" eventKey="catalog">
                   <p
                     className={
                       homePage ? css.navBarLinkText : css.navBarLinkTextWhite
@@ -67,7 +67,15 @@ const NavigationBar = () => {
                     Catalog
                   </p>
                 </Nav.Link>
-                <Nav.Link as={Link} to="/favorites" eventKey="3">
+                <Nav.Link
+                  as={Link}
+                  to="/favorites"
+                  eventKey="favorites"
+                  onClick={() => {
+                    setIsActive(!isActive);
+                  }}
+                  style={{ color: isActive ? 'green' : 'blue' }}
+                >
                   <p
                     className={
                       homePage ? css.navBarLinkText : css.navBarLinkTextWhite

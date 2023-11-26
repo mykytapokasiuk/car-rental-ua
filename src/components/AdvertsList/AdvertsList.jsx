@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Loader from '../Loader/Loader.jsx';
 import AdvertsListItem from '../AdvertsListItem/AdvertsListItem.jsx';
 import useFetchAdverts from '../../hooks/useFetchAdverts.js';
-import { fetchAdvertsThunk } from '../../redux/adverts/operations.js';
 import * as notifications from '../../services/utils.js';
 import css from './AdvertsList.module.css';
 
@@ -15,6 +14,7 @@ const AdvertsList = () => {
     dispatch,
     onLoadMore,
     showButton,
+    onFetchAdverts,
   } = useFetchAdverts();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const AdvertsList = () => {
     } else if (adverts.length !== 0) {
       return;
     }
-    dispatch(fetchAdvertsThunk());
+    onFetchAdverts();
     notifications.onSuccessFetch();
   }, [dispatch, error]);
 

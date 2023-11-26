@@ -27,14 +27,16 @@ export const onSuccessFetch = () => {
   });
 };
 
-export const carMakes = makes.map((make) => ({
-  value: make,
-  label: make,
-}));
+// export const carMakes = makes.map((make) => ({
+//   value: make,
+//   label: make,
+// }));
 
-export const pricesPerHour = [...Array(26)]
-  .map((item, i) => ({
-    value: 10 * i,
-    label: 10 * i,
-  }))
-  .slice(1);
+export const pricesPerHour = [...Array(26)].map((item, i) => 10 * i).slice(1);
+
+// export const pricesPerHour = [...Array(26)]
+//   .map((item, i) => ({
+//     value: 10 * i,
+//     label: 10 * i,
+//   }))
+//   .slice(1);

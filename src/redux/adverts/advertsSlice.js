@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAdvertsThunk } from './operations.js';
+import { fetchAdvertsThunk, fetchFilteredAdvertsThunk } from './operations.js';
 
 const initialState = {
   items: [],
   isLoading: false,
   error: null,
-  axiosParams: { page: 1, limit: 12 },
+  axiosParams: {},
   favorite: null,
 };
 
@@ -13,6 +13,9 @@ const advertsSlice = createSlice({
   name: 'adverts',
   initialState,
   reducers: {
+    setAxiosParams: (state, action) => {
+      state.axiosParams = action.payload;
+    },
     incrementPage: (state) => {
       state.axiosParams.page = state.axiosParams.page + 1;
     },
@@ -30,8 +33,21 @@ const advertsSlice = createSlice({
       .addCase(fetchAdvertsThunk.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+      })
+
+      .addCase(fetchFilteredAdvertsThunk.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchFilteredAdvertsThunk.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.items = action.payload;
+      })
+      .addCase(fetchFilteredAdvertsThunk.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
       }),
 });
 
-export const { incrementPage } = advertsSlice.actions;
+export const { incrementPage, setAxiosParams } = advertsSlice.actions;
 export const advertsSliceReducer = advertsSlice.reducer;

@@ -1,43 +1,40 @@
-import { useId } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  setCarBrandFilter,
-  setPricePerHourFilter,
-  setMileageFromFilter,
-  setMileageToFilter,
-  setClearFilter,
+  setCarFilter,
+  setClearCarFilter,
 } from '../redux/filter/filterSlice.js';
+import { fetchFilteredAdvertsThunk } from '../redux/adverts/operations.js';
 import { selectFilter } from '../redux/filter/selectors.js';
 
 const useFilterAdverts = () => {
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
-  const filterId = useId();
 
-  const onChangeCarBrand = (selectedOption) => {
-    dispatch(setCarBrandFilter(selectedOption));
+  const onChangeCarFilter = (event) => {
+    dispatch(
+      setCarFilter({
+        [event.target.id]: event.target.value,
+      }),
+    );
   };
-  const onChangePricePerHour = (selectedOption) => {
-    dispatch(setPricePerHourFilter(selectedOption));
+
+  const clearFilter = (filter) => {
+    dispatch(
+      setClearCarFilter({
+        [filter]: '',
+      }),
+    );
   };
-  const onChangeMileageFrom = (event) => {
-    dispatch(setMileageFromFilter(+event.target.value));
-  };
-  const onChangeMileageTo = (event) => {
-    dispatch(setMileageToFilter(+event.target.value));
-  };
-  const clearFilters = () => {
-    dispatch(setClearFilter(''));
+
+  const getFilteredAdverts = () => {
+    dispatch(fetchFilteredAdvertsThunk());
   };
 
   return {
     filter,
-    filterId,
-    onChangeCarBrand,
-    onChangePricePerHour,
-    onChangeMileageFrom,
-    onChangeMileageTo,
-    clearFilters,
+    onChangeCarFilter,
+    clearFilter,
+    getFilteredAdverts,
   };
 };
 
