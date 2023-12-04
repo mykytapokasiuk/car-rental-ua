@@ -2,7 +2,6 @@ import { Suspense, lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar/NavigationBar.jsx';
 import Loader from './components/Loader/Loader.jsx';
-import css from './App.module.css';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage.jsx'));
@@ -12,7 +11,7 @@ const FavoritesPage = lazy(() =>
 
 function App() {
   return (
-    <div className={css.container}>
+    <>
       <header>
         <NavigationBar />
       </header>
@@ -26,7 +25,7 @@ function App() {
           </Routes>
         </Suspense>
       </main>
-    </div>
+    </>
   );
 }
 export default App;

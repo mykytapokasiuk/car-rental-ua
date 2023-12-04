@@ -24,12 +24,30 @@ const CarFilterForm = () => {
 
   return (
     <div className={css.carFilterFormContainer}>
-      <Button variant="primary" className="d-lg-none" onClick={handleShowForm}>
+      <Button
+        variant="outline-primary"
+        className="d-lg-none"
+        onClick={handleShowForm}
+        style={{
+          padding: '0px 20px',
+          marginBottom: '25px',
+          fontSize: '18px',
+          letterSpacing: '0.08em',
+          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+        }}
+      >
         Filter
       </Button>
-      <Offcanvas show={showForm} onHide={handleCloseForm} responsive="lg">
+      <Offcanvas
+        className={css.offCanvasContainer}
+        show={showForm}
+        onHide={handleCloseForm}
+        responsive="lg"
+      >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Filter</Offcanvas.Title>
+          <Offcanvas.Title className={css.offCanvasTitle}>
+            Filter
+          </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <form className={css.carFilterForm} onSubmit={handleSubmit}>

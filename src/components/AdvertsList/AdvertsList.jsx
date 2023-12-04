@@ -14,6 +14,7 @@ const AdvertsList = () => {
     dispatch,
     onLoadMore,
     showButton,
+    showNoMatchMessage,
     onFetchAdverts,
   } = useFetchAdverts();
 
@@ -55,6 +56,12 @@ const AdvertsList = () => {
             />
           ))}
         </ul>
+        {!isLoading && showNoMatchMessage && (
+          <p className={css.noMatchMessage}>
+            We apologize, but we couldn't find any results matching your query.
+            Please try again.
+          </p>
+        )}
         {!isLoading && showButton && (
           <button
             className={css.loadMoreBtn}

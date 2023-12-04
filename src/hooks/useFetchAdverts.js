@@ -3,6 +3,7 @@ import {
   selectAdverts,
   selectError,
   selectIsloading,
+  selectAxiosParams,
 } from '../redux/adverts/selectors.js';
 import {
   setAxiosParams,
@@ -48,8 +49,9 @@ const useFetchAdverts = () => {
       rentalPrice: +item.rentalPrice.substring(1),
     };
   });
-
-  const showButton = updatedAdverts.length !== 32;
+  const page = useSelector(selectAxiosParams);
+  const showButton = updatedAdverts.length === page * 12;
+  const showNoMatchMessage = updatedAdverts.length === 0;
 
   return {
     adverts,
@@ -59,6 +61,7 @@ const useFetchAdverts = () => {
     dispatch,
     onLoadMore,
     showButton,
+    showNoMatchMessage,
     onFetchAdverts,
   };
 };

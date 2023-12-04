@@ -6,7 +6,6 @@ const initialState = {
   isLoading: false,
   error: null,
   axiosParams: {},
-  favorite: null,
 };
 
 const advertsSlice = createSlice({

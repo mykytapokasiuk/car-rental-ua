@@ -11,12 +11,34 @@ label {
     font-family: 'Manrope', sans-serif;
 }
 
+.offCanvasContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.offCanvasTitle {
+    color: #3470FF;
+    font-family: 'Manrope-SemiBold', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
 .carFilterForm {
     display: flex;
     flex-wrap: wrap;
-    align-items: end;
+    flex-direction: column;
+    align-items: start;
     padding-bottom: 50px;
     gap: 18px;
+}
+
+@media screen and (min-width: 992px) {
+    .carFilterForm {
+        flex-direction: row;
+        align-items: end;
+    }
 }
 
 .carBrandContainer {
@@ -31,7 +53,7 @@ label {
 }
 
 .carBrandSelect {
-    padding: 14px 18px;
+    padding: 14px 17px 14px 16px;
     background-color: #F7F7FB;
     color: #121417;
     border: none;
@@ -78,6 +100,10 @@ label {
 .clearFilterBtn:hover {
     color: red;
     transform: rotateY(180deg);
+}
+
+.clearFilterBtn:focus {
+    outline: none;
 }
 
 .carPriceContainer {
@@ -175,4 +201,8 @@ label {
 .carFilterSubmitBtn:hover {
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: #0B44CD;
+}
+
+.carFilterSubmitBtn:focus {
+    outline: none;
 }

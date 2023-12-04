@@ -12,17 +12,22 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { advertsSliceReducer } from './adverts/advertsSlice.js';
 import { filterSliceReducer } from './filter/filterSlice.js';
+import { favoritesSliceReducer } from './favorites/favoritesSlice.js';
 
-const advertsPersistConfig = {
-  key: 'adverts',
+const advertsFavoritePersistConfig = {
+  key: 'advertsFavorite',
   storage,
-  whitelist: ['favorite'],
+  whitelist: ['favorites'],
 };
 
 export const store = configureStore({
   reducer: {
-    adverts: persistReducer(advertsPersistConfig, advertsSliceReducer),
+    adverts: advertsSliceReducer,
     advertsFilter: filterSliceReducer,
+    advertsFavorite: persistReducer(
+      advertsFavoritePersistConfig,
+      favoritesSliceReducer,
+    ),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
