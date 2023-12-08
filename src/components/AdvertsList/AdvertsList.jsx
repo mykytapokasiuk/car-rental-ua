@@ -5,6 +5,9 @@ import AdvertsListItem from '../AdvertsListItem/AdvertsListItem.jsx';
 import useFetchAdverts from '../../hooks/useFetchAdverts.js';
 import * as notifications from '../../services/utils.js';
 import css from './AdvertsList.module.css';
+import ScrollToTop from 'react-scroll-to-top';
+import { BsFillArrowUpSquareFill } from 'react-icons/bs';
+import { IconContext } from 'react-icons';
 
 const AdvertsList = () => {
   const {
@@ -83,6 +86,26 @@ const AdvertsList = () => {
           </button>
         )}
       </div>
+      <ScrollToTop
+        smooth
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '60px',
+          height: '60px',
+          borderRadius: '8px',
+          backgroundColor: '#0d6efd',
+          boxShadow: '2px 2px 5px 0px rgba(0, 0, 0, 0.75)',
+        }}
+        component={
+          <IconContext.Provider value={{ color: '#F7F7FB', size: '3.65em' }}>
+            <div>
+              <BsFillArrowUpSquareFill />
+            </div>
+          </IconContext.Provider>
+        }
+      />
     </>
   );
 };

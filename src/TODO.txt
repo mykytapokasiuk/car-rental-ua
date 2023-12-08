@@ -1,9 +1,0 @@
-1. Give color current page links       -
-2. Create logic for filter axios requests - 
-- add to redux axios params new keys -
-- add function for get adverts by filter value -
-3. Create logic for adding favorites
-- check white list in redux persist for showing favorites in local storage
-- create function for getting favorites adverts from local storage
-- add paragraph to favorites page  - favorites && <p>No favorites yet </>
-4. add styling to filter form

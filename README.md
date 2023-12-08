@@ -1,108 +1,114 @@
-# React + Vite template
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+</p>
 
-Цей проєкт було створено за допомогою [Create Vite](https://vitejs.dev/). Для
-знайомства і налаштування додаткових можливостей
-[звернися до документації](https://vitejs.dev/guide/).
+<h3 align="center">Easy-drive-ua</h3>
 
-## Створення репозиторію за шаблоном
+<div align="center">
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення
-репозиторію свого проєкту. Для цього натисни на кнопку `"Use this template"` і
-обери опцію `"Create a new repository"`, як показано на зображенні.
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/mykytapokasiuk/easy-drive-ua/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/mykytapokasiuk/easy-drive-ua/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-![Creating repo from a template step 1](./src/assets/template-step-1.png)
+</div>
 
-На наступному кроці відкриється сторінка створення нового репозиторію. Заповни
-поле його імені, переконайся що репозиторій публічний, після чого натисни кнопку
-`"Create repository from template"`.
+---
 
-![Creating repo from a template step 2](./src/assets/template-step-2.png)
+<p align="center"> Few lines describing your project.
+    <br> 
+</p>
 
-Після того як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як показано
-на зображенні.
+## 📝 Table of Contents
 
-![Settings GitHub Actions permissions step 1](./src/assets/gh-actions-perm-1.png)
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [TODO](../TODO.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
 
-Проскроливши сторінку до самого кінця, у секції `"Workflow permissions"` вибери
-опцію `"Read and write permissions"` і постав галочку в чекбоксі. Це необхідно
-для автоматизації процесу деплою проєкту.
+## 🧐 About <a name = "about"></a>
 
-![Settings GitHub Actions permissions step 2](./src/assets/gh-actions-perm-2.png)
+Write about 1-2 paragraphs describing the purpose of your project.
 
-Тепер у тебе є особистий репозиторій проєкту, зі структурою файлів і папок
-репозиторія-шаблону. Далі працюй з ним як з будь-яким іншим особистим
-репозиторієм, клонуй його собі на комп'ютер, пиши код, роби комміти і відправляй
-їх на GitHub.
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-## Підготовка до роботи
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-1. Переконайся, що на комп'ютері встановлена LTS-версія Node.js.
-   [Скачай і встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встановіть базові залежності проекту командою `npm install`.
-3. Запустіть режим розробки, виконавши команду `npm run dev`.
-4. Перейди в браузері за адресою, що зазначено в терміналі.
+### Prerequisites
 
-## Деплой
+What things you need to install the software and how to install them.
 
-Продакшн версія проєкту буде автоматично збиратися і деплоїтися на GitHub Pages,
-у гілку `gh-pages`, щоразу, коли оновлюється гілка `main`. Наприклад, після
-прямого пушу або прийнятого пул-реквесту. Для цього необхідно у файлі
-`vite.config.js` відредагувати поле `base`, замінивши `react_vite` на свою назву
-репозиторію `"/your_repo_name"`, і відправити зміни на GitHub.
-
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) і
-виставити роздачу продакшн версії файлів із папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
-
-![GitHub Pages settings](./src/assets/repo-settings.png)
-
-### Статус деплоя
-
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
-
-- **Жовтий колір** - виконується збірка і деплой проєкту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час збирання або деплою сталася помилка.
-
-Детальнішу інформацію про статус можна подивитися, клікнувши на іконку, і в
-випадаючому вікні перейти за посиланням `Details`.
-
-![Deployment status](./src/assets/deploy-status.png)
-
-### Жива сторінка
-
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною в налаштуваннях GitHub-репозиторію (`Settings` > `Pages`).
-
-![GitHub-pages URL](./src/assets/gh-pages-url.png)
-
-Якщо відкривається порожня сторінка, переконайся що у вкладці `Console` немає
-помилок пов'язаних із неправильними шляхами до CSS і JS файлів проекту
-(**404**). Швидше за все найімовірніше, у тебе неправильне значення поля `base`
-у файлі `vite.config.js`.
-
-### Маршрутизація
-
-Якщо додаток використовує бібліотеку `react-router-dom` для маршрутизації,
-необхідно додатково налаштувати компонент `<BrowserRouter>`, передавши в пропе
-`basename` точну назву твого репозиторію. Слеш на початку рядка обов'язковий.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
 ```
-### Додавання змінних в  .env
-Для зберігання конфігураційних даних, таких як API ключі, адреси серверів, порти та інші змінні використовуйте файл `.env`. Для цього необхідно з назви файлу `.env.template` видалити зайві ".template",після чого файл відповідатиме умовам файлу `.ignore` і буде зберігатися лише локально, не публікуючись на віддаленому репозиторії з метою безпеки. Задля використання змінних на GitHub-pages усі змінні, передбачені файлом .env, слід додати до файлу `.github/workflows/deploy.yml`, а також до налаштувань репозиторію. Для цього слід перейти (`Settings` > `Secrets and variables` > `Actions`)
+Give examples
+```
 
-![Add enviroments from .env](./src/assets/secrets.png)
+### Installing
 
-## Як це працює
+A step by step series of examples that tell you how to get a development env running.
 
-1. Після кожного пушу в гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) з файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проєкт ініціалізується і
-   проходить збірку перед деплоєм. 3 Якщо всі кроки пройшли успішно, зібрана
-   продакшн-версія файлів проєкту відправляється в гілку `gh-pages`. В іншому
-   випадку, в логах виконання скрипта буде вказано в чому проблема.
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo.
+
+## 🔧 Running the tests <a name = "tests"></a>
+
+Explain how to run the automated tests for this system.
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## 🎈 Usage <a name="usage"></a>
+
+Add notes about how to use the system.
+
+## 🚀 Deployment <a name = "deployment"></a>
+
+Add additional notes about how to deploy this on a live system.
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Express](https://expressjs.com/) - Server Framework
+- [VueJs](https://vuejs.org/) - Web Framework
+- [NodeJs](https://nodejs.org/en/) - Server Environment
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+
+See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- References
