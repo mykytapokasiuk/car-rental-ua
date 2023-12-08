@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Alert from 'react-bootstrap/Alert';
 import Loader from '../Loader/Loader.jsx';
 import AdvertsListItem from '../AdvertsListItem/AdvertsListItem.jsx';
 import useFetchAdverts from '../../hooks/useFetchAdverts.js';
@@ -57,15 +58,23 @@ const AdvertsList = () => {
           ))}
         </ul>
         {!isLoading && showNoMatchMessage && (
-          <p className={css.noMatchMessage}>
-            We apologize, but we couldn't find any results matching your query.
-            Please try again.
-          </p>
+          <div className={css.noMatchMessageContainer}>
+            <Alert variant="primary" className={css.noMatchMessage}>
+              <Alert.Heading className={css.noMatchMessageTitle}>
+                No Results
+              </Alert.Heading>
+              We apologize, but we couldn't find any results matching your
+              query.
+              <hr />
+              <p className={css.noMatchMessageText}>Please try again!</p>
+            </Alert>
+          </div>
         )}
         {!isLoading && showButton && (
           <button
             className={css.loadMoreBtn}
             type="button"
+            title="Load more"
             onClick={() => {
               onLoadMore();
             }}

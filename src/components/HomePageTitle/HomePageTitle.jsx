@@ -6,7 +6,7 @@ const HomePageTitle = () => {
   return (
     <div className={css.container}>
       <h2 className={css.homePageTitle}>Drive safely with EasyDrive</h2>
-      <Link className={css.rentCarBtn} to={'/catalog'}>
+      <Link className={css.rentCarBtn} to={'/catalog'} title="Rent now">
         Rent Now
       </Link>
     </div>

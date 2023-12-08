@@ -27,6 +27,7 @@ const CarFilterForm = () => {
       <Button
         variant="outline-primary"
         className="d-lg-none"
+        title="Filter"
         onClick={handleShowForm}
         style={{
           padding: '0px 20px',
@@ -58,6 +59,7 @@ const CarFilterForm = () => {
                   className={css.carBrandSelect}
                   id="make"
                   name="make"
+                  title="Select brand"
                   onChange={onChangeCarFilter}
                   value={filter.make}
                 >
@@ -104,6 +106,7 @@ const CarFilterForm = () => {
                   className={css.carPriceSelect}
                   id="rentalPrice"
                   name="rentalPrice"
+                  title="Price per hour"
                   onChange={onChangeCarFilter}
                   value={filter.rentalPrice}
                 >
@@ -151,6 +154,7 @@ const CarFilterForm = () => {
                   type="number"
                   id="mileageFrom"
                   name="mileageFrom"
+                  title="Mileage from"
                   onChange={onChangeCarFilter}
                   value={filter.mileageFrom}
                   placeholder="From"
@@ -177,6 +181,7 @@ const CarFilterForm = () => {
                   type="number"
                   id="mileageTo"
                   name="mileageTo"
+                  title="Mileage to"
                   onChange={onChangeCarFilter}
                   value={filter.mileageTo}
                   placeholder="To"
@@ -195,7 +200,11 @@ const CarFilterForm = () => {
                 </button>
               </div>
             </div>
-            <button type="submit" className={css.carFilterSubmitBtn}>
+            <button
+              type="submit"
+              className={css.carFilterSubmitBtn}
+              title="Search"
+            >
               Search
             </button>
           </form>

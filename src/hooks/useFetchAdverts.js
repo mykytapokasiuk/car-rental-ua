@@ -14,6 +14,7 @@ import { fetchAdvertsThunk } from '../redux/adverts/operations.js';
 const useFetchAdverts = () => {
   const adverts = useSelector(selectAdverts);
   const isLoading = useSelector(selectIsloading);
+  const page = useSelector(selectAxiosParams);
   const error = useSelector(selectError);
   const dispatch = useDispatch();
 
@@ -49,7 +50,6 @@ const useFetchAdverts = () => {
       rentalPrice: +item.rentalPrice.substring(1),
     };
   });
-  const page = useSelector(selectAxiosParams);
   const showButton = updatedAdverts.length === page * 12;
   const showNoMatchMessage = updatedAdverts.length === 0;
 

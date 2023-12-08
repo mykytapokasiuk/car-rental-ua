@@ -1,0 +1,50 @@
+.favoritesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 50px;
+    margin: 0 auto;
+}
+
+.favoritesList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    row-gap: 50px;
+    column-gap: 29px;
+    justify-content: center;
+}
+
+.favoritesTitle {
+    margin-bottom: 25px;
+    color: #ff8747;
+    font-family: 'Manrope-SemiBold', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.noFavoritesMessageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.noFavoritesMessage {
+    padding: 10px;
+    color: #3470FF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.catalogLink {
+    color: #ff8747;
+    font-family: 'Manrope-SemiBold', sans-serif;
+    font-size: 20px;
+}

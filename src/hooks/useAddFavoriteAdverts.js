@@ -5,11 +5,13 @@ import {
 } from '../redux/favorites/favoritesSlice.js';
 import { selectFavorite } from '../redux/favorites/selectors.js';
 import { selectAdverts } from '../redux/adverts/selectors.js';
+import * as notifications from '../services/utils.js';
 
 const useAddFavoriteAdverts = () => {
   const adverts = useSelector(selectAdverts);
   const favorites = useSelector(selectFavorite);
   const dispatch = useDispatch();
+  const showNoFavoritesMessage = favorites.length === 0;
 
   const updatedAdverts = adverts.map((item) => {
     return {
@@ -36,24 +38,27 @@ const useAddFavoriteAdverts = () => {
     );
     if (favorites.some((item) => item.id === advertId)) {
       dispatch(deleteFavoriteAdvert(advertId));
+      notifications.onRemoveFromFavorites();
       return;
     }
     dispatch(addFavoriteAdvert(favoriteAdvert));
+    notifications.onAddToFavorites();
   };
 
-  const setFavoriteIconColor = (advertId, prop) => {
+  const setFavoriteIconStatus = (advertId, prop) => {
     const advertIn = favorites.some((item) => item.id === advertId);
     if (prop === 'fill') {
       return advertIn ? '#3470FF' : 'none';
     } else if (prop === 'stroke') {
       return advertIn ? 'none' : 'white';
-    }
+    } else return advertIn ? 'Remove from favorites' : 'Add to favorites';
   };
 
   return {
     favorites,
     onAddFavoriteAdvert,
-    setFavoriteIconColor,
+    setFavoriteIconStatus,
+    showNoFavoritesMessage,
   };
 };
 

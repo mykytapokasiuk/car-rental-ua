@@ -1,0 +1,89 @@
+.advertCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 274px;
+    height: 426px;
+}
+
+.favoriteBtn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: none;
+    background-color: transparent;
+}
+
+.favoriteIcon:hover path {
+    stroke: none;
+    fill: #3470FF;
+}
+
+.advertImage {
+    height: 268px;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    object-fit: cover;
+    transition: box-shadow 500ms ease-in-out;
+}
+
+.advertImage:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.advertCardTitle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 14px;
+    font-family: "Manrope-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.model {
+    color: #3470FF;
+}
+
+.rentalPrice {
+    margin-left: auto;
+}
+
+.advertCardBody {
+    display: flex;
+    text-align: left;
+    margin-top: 8px;
+    color: rgba(18, 20, 23, 0.5);
+    font-family: "Manrope-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.advertCardBtn {
+    margin-top: auto;
+    padding: 12px 0;
+    background-color: #3470FF;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-family: "Manrope-SemiBold", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    transition: box-shadow 500ms ease-in-out, background-color 500ms ease-in-out;
+}
+
+.advertCardBtn:hover {
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #0B44CD;
+}
+
+.advertCardBtn:focus {
+    outline: none;
+}

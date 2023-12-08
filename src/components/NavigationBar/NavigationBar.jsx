@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import css from './NavigationBar.module.css';
 
 const NavigationBar = () => {
-  const [isActive, setIsActive] = useState(false);
   const { pathname } = useLocation();
   const homePage = pathname === '/';
 
@@ -18,7 +17,10 @@ const NavigationBar = () => {
       >
         <Container fluid>
           <Navbar.Brand as={Link} to="/">
-            <h1 className={homePage ? css.navBarBrand : css.navBarBrandBlue}>
+            <h1
+              className={homePage ? css.navBarBrand : css.navBarBrandBlue}
+              title="Home"
+            >
               EasyDrive
             </h1>
           </Navbar.Brand>
@@ -54,6 +56,7 @@ const NavigationBar = () => {
                     className={
                       homePage ? css.navBarLinkText : css.navBarLinkTextWhite
                     }
+                    title="Home"
                   >
                     Home
                   </p>
@@ -63,23 +66,17 @@ const NavigationBar = () => {
                     className={
                       homePage ? css.navBarLinkText : css.navBarLinkTextWhite
                     }
+                    title="Catalog"
                   >
                     Catalog
                   </p>
                 </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  to="/favorites"
-                  eventKey="favorites"
-                  onClick={() => {
-                    setIsActive(!isActive);
-                  }}
-                  style={{ color: isActive ? 'green' : 'blue' }}
-                >
+                <Nav.Link as={Link} to="/favorites" eventKey="favorites">
                   <p
                     className={
                       homePage ? css.navBarLinkText : css.navBarLinkTextWhite
                     }
+                    title="Favorites"
                   >
                     Favorites
                   </p>

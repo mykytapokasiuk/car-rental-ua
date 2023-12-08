@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import CarInfoModal from '../CarInfoModal/CarInfoModal.jsx';
 import useAddFavoriteAdverts from '../../hooks/useAddFavoriteAdverts.js';
-import css from './AdvertsListItem.module.css';
+import css from './FavoritesListItem.module.css';
 
-const AdvertsListItem = (props) => {
+const FavoritesListItem = (props) => {
   const { onAddFavoriteAdvert, setFavoriteIconStatus } =
     useAddFavoriteAdverts();
   const [show, setShow] = useState(false);
   const carProps = { ...props };
-
   return (
     <>
       <li className={css.advertCard}>
@@ -71,7 +70,7 @@ const AdvertsListItem = (props) => {
   );
 };
 
-AdvertsListItem.propTypes = {
+FavoritesListItem.propTypes = {
   make: PropTypes.string.isRequired,
   model: PropTypes.string.isRequired,
   year: PropTypes.number.isRequired,
@@ -85,4 +84,4 @@ AdvertsListItem.propTypes = {
   img: PropTypes.string.isRequired,
 };
 
-export default AdvertsListItem;
+export default FavoritesListItem;
