@@ -21,7 +21,7 @@ const NavigationBar = () => {
               className={homePage ? css.navBarBrand : css.navBarBrandBlue}
               title="Home"
             >
-              EasyDrive
+              EasyDriveUA
             </h1>
           </Navbar.Brand>
           <Navbar.Toggle

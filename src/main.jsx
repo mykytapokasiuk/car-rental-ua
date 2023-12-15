@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
   <Provider store={store}>
     <PersistGate loading={<p>loading...</p>} persistor={persistor}>
       <BrowserRouter basename="/easy-drive-ua">
@@ -17,5 +16,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </BrowserRouter>
     </PersistGate>
   </Provider>,
-  // </React.StrictMode>,
 );
