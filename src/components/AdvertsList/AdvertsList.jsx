@@ -4,10 +4,10 @@ import Loader from '../Loader/Loader.jsx';
 import AdvertsListItem from '../AdvertsListItem/AdvertsListItem.jsx';
 import useFetchAdverts from '../../hooks/useFetchAdverts.js';
 import * as notifications from '../../services/utils.js';
-import css from './AdvertsList.module.css';
 import ScrollToTop from 'react-scroll-to-top';
 import { BsFillArrowUpSquareFill } from 'react-icons/bs';
 import { IconContext } from 'react-icons';
+import css from './AdvertsList.module.css';
 
 const AdvertsList = () => {
   const {
