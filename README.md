@@ -78,7 +78,7 @@ running.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+Please take note of the following instructions on how to deploy a project on a live system.
 
 - The production version of the project will be automatically built and deployed
   to GitHub Pages, in the gh-pages branch, every time the main branch is
