@@ -70,7 +70,7 @@ running.
 - The application consists of 3 pages:
   - A homepage with a menu
   - A page displaying a catalog of cars with filters for brand, rental price per
-    year, and mileage.
+    hour, and mileage.
   - A page with ads that have been added to favorites by the user
 - Possibility to clear one or all the filters
 - A modal window that displays detailed information about the car and its rental
