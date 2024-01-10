@@ -7,6 +7,8 @@ import css from './CarFilterForm.module.css';
 
 const CarFilterForm = () => {
   const [showForm, setShowForm] = useState(false);
+  const [brandSelectArrowUp, setBrandSelectArrowUp] = useState(false);
+  const [priceSelectArrowUp, setPriceSelectArrowUp] = useState(false);
   const { onChangeCarFilter, clearFilter, getFilteredAdverts, filter } =
     useFilterAdverts();
 
@@ -15,6 +17,11 @@ const CarFilterForm = () => {
   };
   const handleCloseForm = () => {
     setShowForm(false);
+  };
+  const handleSelectArrowIcon = (filter) => {
+    filter === 'brand'
+      ? setBrandSelectArrowUp(!brandSelectArrowUp)
+      : setPriceSelectArrowUp(!priceSelectArrowUp);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,17 +68,29 @@ const CarFilterForm = () => {
                   name="make"
                   title="Select brand"
                   onChange={onChangeCarFilter}
+                  onClick={() => {
+                    handleSelectArrowIcon('brand');
+                  }}
+                  onBlur={() => {
+                    brandSelectArrowUp ? handleSelectArrowIcon('brand') : null;
+                  }}
                   value={filter.make}
                 >
                   <option value="">Select brand</option>
                   {makes.map((item) => (
-                    <option key={item} value={item}>
+                    <option
+                      className={css.brandSelectOption}
+                      key={item}
+                      value={item}
+                    >
                       {item}
                     </option>
                   ))}
                 </select>
                 <svg
-                  className={css.selectArrow}
+                  className={
+                    brandSelectArrowUp ? css.selectArrowUp : css.selectArrowDown
+                  }
                   width="20"
                   height="20"
                   viewBox="0 0 20 20"
@@ -108,6 +127,12 @@ const CarFilterForm = () => {
                   name="rentalPrice"
                   title="Price per hour"
                   onChange={onChangeCarFilter}
+                  onClick={() => {
+                    handleSelectArrowIcon('price');
+                  }}
+                  onBlur={() => {
+                    priceSelectArrowUp ? handleSelectArrowIcon('price') : null;
+                  }}
                   value={filter.rentalPrice}
                 >
                   <option value="">To $</option>
@@ -118,7 +143,9 @@ const CarFilterForm = () => {
                   ))}
                 </select>
                 <svg
-                  className={css.selectArrow}
+                  className={
+                    priceSelectArrowUp ? css.selectArrowUp : css.selectArrowDown
+                  }
                   width="20"
                   height="20"
                   viewBox="0 0 20 20"
