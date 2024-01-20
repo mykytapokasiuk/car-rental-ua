@@ -1,5 +1,5 @@
 label {
-    font-family: 'Manrope-medium', sans-serif;
+    font-family: 'Manrope', Helvetica;
     font-size: 14px;
     color: #8A8A89;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -8,7 +8,7 @@ label {
 .carFilterFormContainer {
     padding: 0 15px;
     margin: 0 auto;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', Helvetica;
 }
 
 .offCanvasContainer {
@@ -18,7 +18,7 @@ label {
 
 .offCanvasTitle {
     color: #3470FF;
-    font-family: 'Manrope-SemiBold', sans-serif;
+    font-family: 'Manrope', Helvetica;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -58,7 +58,7 @@ label {
     color: #121417;
     border: none;
     border-radius: 14px;
-    font-family: 'Manrope-medium', sans-serif;
+    font-family: 'Manrope', Helvetica;
     font-size: 18px;
     font-weight: 500;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -97,7 +97,8 @@ label {
 .clearFilterBtn {
     color: #dcdcf0;
     background-color: transparent;
-    font-family: 'Manrope-medium', sans-serif;
+    font-family: 'Manrope', Helvetica;
+    font-weight: 600;
     font-size: 18px;
     border: none;
     border-radius: 50%;
@@ -131,7 +132,7 @@ label {
     color: #121417;
     border: none;
     border-radius: 14px;
-    font-family: 'Manrope-medium', sans-serif;
+    font-family: 'Manrope', Helvetica;
     font-size: 18px;
     font-weight: 500;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -160,7 +161,7 @@ label {
     background-color: #F7F7FB;
     border: none;
     border-radius: 14px;
-    font-family: 'Manrope-medium', sans-serif;
+    font-family: 'Manrope', Helvetica;
     font-size: 18px;
     font-weight: 500;
     box-shadow: rgb(0, 0, 0) -2px -2px 6px 0px inset;
@@ -188,7 +189,7 @@ label {
     color: #121417;
     border: none;
     border-radius: 14px;
-    font-family: 'Manrope-medium', sans-serif;
+    font-family: 'Manrope', Helvetica;
     font-size: 18px;
     font-weight: 500;
     box-shadow: rgb(0, 0, 0) -2px -2px 6px 0px inset;
@@ -201,8 +202,8 @@ label {
     background-color: #3470FF;
     border: none;
     border-radius: 12px;
-    font-family: "Manrope-SemiBold", Helvetica;
-    font-size: 14px;
+    font-family: 'Manrope', Helvetica;
+    font-weight: 600;
     letter-spacing: 0.08em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);

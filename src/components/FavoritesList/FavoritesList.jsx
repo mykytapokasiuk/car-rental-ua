@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Alert from 'react-bootstrap/Alert';
 import FavoritesListItem from '../FavoritesListItem/FavoritesListItem.jsx';
@@ -43,7 +42,7 @@ const FavoritesList = () => {
           <div className={css.noFavoritesMessageContainer}>
             <Alert variant="primary" className={css.noFavoritesMessage}>
               <Alert.Heading>No Favorites</Alert.Heading>
-              You haven't added any favorites yet
+              You haven`t added any favorites yet
               <hr />
               <Alert.Link as={Link} to="/catalog">
                 {' '}

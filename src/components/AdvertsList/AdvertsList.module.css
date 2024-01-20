@@ -20,7 +20,7 @@
     background-color: transparent;
     color: #3470FF;
     border: none;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', Helvetica;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -46,7 +46,7 @@
 .noMatchMessage {
     padding: 10px;
     color: #3470FF;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', Helvetica;
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;

@@ -6,7 +6,7 @@
 .advertTitle {
     padding: 0;
     color: #121417;
-    font-family: "Manrope-Medium", Helvetica;
+    font-family: 'Manrope', Helvetica;
     font-size: 24px;
     font-weight: 500;
     line-height: 24px;
@@ -26,7 +26,7 @@
     gap: 5px;
     margin: 0;
     color: #121417;
-    font-family: "Manrope-Medium", Helvetica;
+    font-family: 'Manrope', Helvetica;
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
@@ -43,7 +43,7 @@
 
 .carInfoText {
     margin: 0;
-    font-family: "Manrope-Regular", Helvetica;
+    font-family: 'Manrope', Helvetica;
     color: rgba(18, 20, 23, 0.5);
     font-size: 12px;
     font-weight: 400;
@@ -51,7 +51,7 @@
 }
 
 .carDescription {
-    font-family: "Manrope-Regular", Helvetica;
+    font-family: 'Manrope', Helvetica;
     margin: 14px 0 0 0;
     color: #121417;
     font-size: 14px;
@@ -67,7 +67,7 @@
 .accessoriesTitle {
     margin: 0;
     color: #121417;
-    font-family: "Manrope-Medium", Helvetica;
+    font-family: 'Manrope', Helvetica;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -76,7 +76,7 @@
 
 .accessoriesText {
     margin: 8px 0 0 0;
-    font-family: "Manrope-Regular", Helvetica;
+    font-family: 'Manrope', Helvetica;
     color: rgba(18, 20, 23, 0.5);
     font-size: 12px;
     font-weight: 400;
@@ -91,7 +91,7 @@
 .rentalConditionsTitle {
     margin: 0;
     color: #121417;
-    font-family: "Manrope-Medium", Helvetica;
+    font-family: 'Manrope', Helvetica;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -110,7 +110,7 @@
     padding: 7px 14px;
     border-radius: 35px;
     background-color: #F9F9F9;
-    font-family: "Montserrat-Regular", Helvetica;
+    font-family: 'Manrope', Helvetica;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
@@ -121,15 +121,19 @@
 .price {
     margin-left: 3px;
     color: #3470FF;
+    font-family: 'Manrope', Helvetica;
+    font-weight: 600;
 }
 
 .rentalCarBtn {
     margin-top: 31px;
     padding: 12px 50px;
-    font-family: "Manrope", Helvetica;
+    font-family: 'Manrope', Helvetica;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
+    letter-spacing: 0.06rem;
+    color: #ffffff;
     background-color: #3470ff;
     border: none;
     border-radius: 12px;
@@ -140,8 +144,4 @@
 .rentalCarBtn:hover {
     box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: #0B44CD;
-}
-
-.rentalCarBtnLink {
-    color: #ffffff;
 }

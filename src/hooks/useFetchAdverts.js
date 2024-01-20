@@ -63,6 +63,7 @@ const useFetchAdverts = () => {
     showButton,
     showNoMatchMessage,
     onFetchAdverts,
+    page,
   };
 };
 

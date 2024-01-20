@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Offcanvas } from 'react-bootstrap';
 import useFilterAdverts from '../../hooks/useFilterAdverts.js';
 import { pricesPerHour } from '../../services/utils.js';
@@ -113,7 +113,7 @@ const CarFilterForm = () => {
                     clearFilter('make');
                   }}
                 >
-                  x
+                  X
                 </button>
               </div>
             </div>
@@ -168,7 +168,7 @@ const CarFilterForm = () => {
                     clearFilter('rentalPrice');
                   }}
                 >
-                  x
+                  X
                 </button>
               </div>
             </div>
@@ -196,7 +196,7 @@ const CarFilterForm = () => {
                     clearFilter('mileageFrom');
                   }}
                 >
-                  x
+                  X
                 </button>
               </div>
             </div>
@@ -223,7 +223,7 @@ const CarFilterForm = () => {
                     clearFilter('mileageTo');
                   }}
                 >
-                  x
+                  X
                 </button>
               </div>
             </div>

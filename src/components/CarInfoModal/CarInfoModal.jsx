@@ -70,11 +70,15 @@ const CarInfoModal = ({ show, setShow, carProps }) => {
               </ul>
             </div>
           </div>
-          <button className={css.rentalCarBtn} type="button" title="Rental car">
-            <a className={css.rentalCarBtnLink} href="tel:+380730000000">
+          <a href="tel:+380730000000">
+            <button
+              className={css.rentalCarBtn}
+              type="button"
+              title="Rental car"
+            >
               Rental car
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
       </Modal.Body>
     </Modal>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Loader from '../Loader/Loader.jsx';
 import AdvertsListItem from '../AdvertsListItem/AdvertsListItem.jsx';
@@ -11,7 +11,6 @@ import css from './AdvertsList.module.css';
 
 const AdvertsList = () => {
   const {
-    adverts,
     updatedAdverts,
     isLoading,
     error,
@@ -20,18 +19,18 @@ const AdvertsList = () => {
     showButton,
     showNoMatchMessage,
     onFetchAdverts,
+    page,
   } = useFetchAdverts();
 
   useEffect(() => {
     if (error) {
       notifications.onError(error);
       return;
-    } else if (adverts.length !== 0) {
-      return;
-    }
+    } else if (page) return;
+
     onFetchAdverts();
     notifications.onSuccessFetch();
-  }, [dispatch, error]);
+  }, [error, dispatch, page, onFetchAdverts]);
 
   return (
     <>
@@ -66,7 +65,7 @@ const AdvertsList = () => {
               <Alert.Heading className={css.noMatchMessageTitle}>
                 No Results
               </Alert.Heading>
-              We apologize, but we couldn't find any results matching your
+              We apologize, but we couldn`t find any results matching your
               query.
               <hr />
               <p className={css.noMatchMessageText}>Please try again!</p>

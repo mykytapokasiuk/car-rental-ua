@@ -1,4 +1,3 @@
-import React from 'react';
 import css from './HomePageTitle.module.css';
 import { Link } from 'react-router-dom';
 
