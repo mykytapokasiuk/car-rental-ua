@@ -40,7 +40,7 @@ const useFetchAdverts = () => {
         city: item.address.split(', ')[1],
         country: item.address.split(', ')[2],
       },
-      mileage: +(item.mileage / 1000).toFixed(3),
+      mileage: item.mileage.toLocaleString('en'),
       rentalConditions: {
         age: item.rentalConditions.substring(0, 11),
         ageNumber: item.rentalConditions.substring(13, 15),

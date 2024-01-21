@@ -1,4 +1,3 @@
-import React from 'react';
 import AdvertsList from '../../components/AdvertsList/AdvertsList.jsx';
 import CarFilterForm from '../../components/CarFilterForm/CarFilterForm.jsx';
 

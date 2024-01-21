@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import css from './NavigationBar.module.css';

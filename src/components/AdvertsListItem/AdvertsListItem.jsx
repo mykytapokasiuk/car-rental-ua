@@ -53,7 +53,7 @@ const AdvertsListItem = (props) => {
         </div>
         <div className={css.advertCardBody}>
           {carProps.address.city} | {carProps.address.country} |{' '}
-          {carProps.rentalCompany} | {carProps.type} | {carProps.mileage} |{' '}
+          {carProps.rentalCompany} | {carProps.type} | {carProps.id} |{' '}
           {carProps.accessories[0]} | {carProps.functionalities[0]}
         </div>
         <button
@@ -79,7 +79,7 @@ AdvertsListItem.propTypes = {
   address: PropTypes.objectOf(PropTypes.string).isRequired,
   rentalCompany: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  mileage: PropTypes.number.isRequired,
+  mileage: PropTypes.string.isRequired,
   accessories: PropTypes.arrayOf(PropTypes.string).isRequired,
   functionalities: PropTypes.arrayOf(PropTypes.string).isRequired,
   img: PropTypes.string.isRequired,

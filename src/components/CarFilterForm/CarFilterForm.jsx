@@ -184,9 +184,7 @@ const CarFilterForm = () => {
                   title="Mileage from"
                   onChange={onChangeCarFilter}
                   value={filter.mileageFrom}
-                  placeholder="From"
                   style={{ width: '160px' }}
-                  min={0}
                 />
                 <button
                   type="button"
@@ -211,7 +209,6 @@ const CarFilterForm = () => {
                   title="Mileage to"
                   onChange={onChangeCarFilter}
                   value={filter.mileageTo}
-                  placeholder="To"
                   style={{ width: '160px' }}
                   min={0}
                 />
