@@ -119,7 +119,7 @@ const CarFilterForm = () => {
             </div>
 
             <div className={css.carPriceContainer}>
-              <label htmlFor="rentalPrice">Price/ 1 hour</label>
+              <label htmlFor="rentalPrice">Price&nbsp; 1 hour</label>
               <div className={css.carPriceSelectContainer}>
                 <select
                   className={css.carPriceSelect}
@@ -135,7 +135,7 @@ const CarFilterForm = () => {
                   }}
                   value={filter.rentalPrice}
                 >
-                  <option value="">To $</option>
+                  <option value=""></option>
                   {pricesPerHour.map((item) => (
                     <option key={item} value={item}>
                       {item}
@@ -174,7 +174,7 @@ const CarFilterForm = () => {
             </div>
 
             <div className={css.carMileageFromContainer}>
-              <label htmlFor="mileageFrom">Car mileage / km</label>
+              <label htmlFor="mileageFrom">Car mileage&nbsp; km</label>
               <div className={css.carMileageFromInputContainer}>
                 <input
                   className={css.carMileageFromInput}

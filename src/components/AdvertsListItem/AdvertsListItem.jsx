@@ -45,17 +45,17 @@ const AdvertsListItem = (props) => {
           alt={`${carProps.make} ${carProps.model} ${carProps.year}`}
           className={css.advertImage}
         />
-        <div className={css.advertCardTitle}>
+        <h2 className={css.advertCardTitle}>
           {carProps.make}
           <span className={css.model}>{carProps.model},</span>
           {carProps.year}
           <span className={css.rentalPrice}>${carProps.rentalPrice}</span>
-        </div>
-        <div className={css.advertCardBody}>
+        </h2>
+        <p className={css.advertCardBody}>
           {carProps.address.city} | {carProps.address.country} |{' '}
           {carProps.rentalCompany} | {carProps.type} | {carProps.id} |{' '}
           {carProps.accessories[0]} | {carProps.functionalities[0]}
-        </div>
+        </p>
         <button
           className={css.advertCardBtn}
           title="Learn more"

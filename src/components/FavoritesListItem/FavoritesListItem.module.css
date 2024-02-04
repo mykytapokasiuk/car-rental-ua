@@ -54,7 +54,7 @@
 .advertCardBody {
     display: flex;
     text-align: left;
-    margin-top: 8px;
+    margin: 0;
     color: rgba(18, 20, 23, 0.5);
     font-family: 'Manrope', Helvetica;
     font-size: 12px;

@@ -20,11 +20,11 @@ const CarInfoModal = ({ show, setShow, carProps }) => {
           alt={`${carProps.make} ${carProps.model} ${carProps.year}`}
         />
         <div className={css.carInfoContainer}>
-          <h3 className={css.carInfoTitle}>
+          <h2 className={css.carInfoTitle}>
             {carProps.make}
             <span className={css.model}>{carProps.model},</span>
             {carProps.year}
-          </h3>
+          </h2>
           <div className={css.carInfoBody}>
             <p className={css.carInfoText}>
               {carProps.address.city} | {carProps.address.country} | id:{' '}
@@ -34,9 +34,9 @@ const CarInfoModal = ({ show, setShow, carProps }) => {
             </p>
             <p className={css.carDescription}>{carProps.description}</p>
             <div className={css.carAccessories}>
-              <p className={css.accessoriesTitle}>
+              <h3 className={css.accessoriesTitle}>
                 Accessories and functionalities:
-              </p>
+              </h3>
               <p className={css.accessoriesText}>
                 {carProps.accessories[0]} | {carProps.accessories[1]} |{' '}
                 {carProps.accessories[2]} | {carProps.functionalities[0]} |{' '}
@@ -45,7 +45,7 @@ const CarInfoModal = ({ show, setShow, carProps }) => {
             </div>
 
             <div className={css.rentalConditions}>
-              <p className={css.rentalConditionsTitle}>Rental Conditions:</p>
+              <h3 className={css.rentalConditionsTitle}>Rental Conditions:</h3>
               <ul className={css.rentalConditionsText}>
                 <li className={css.rentalConditionsItem}>
                   {carProps.rentalConditions.age} :
